@@ -42,17 +42,20 @@
       </v-alert>
     </v-row>
     <delete-dialog 
-      ref="deleteDialog" 
+      ref="deleteDialog"
+      @cancel="loadTeams"
       @delete-successful="onSuccess('Delete')"
       @delete-unsuccessful="displayError($event)"
     />
     <create-dialog 
-      ref="createDialog" 
+      ref="createDialog"
+      @cancel="loadTeams"
       @create-successful="onSuccess('Creation')"
       @create-unsuccessful="displayError($event)"
       />
     <edit-dialog 
-      ref="editDialog" 
+      ref="editDialog"
+      @cancel="loadTeams"
       @edit-successful="onSuccess('Edit')"
       @edit-unsuccessful="displayError($event)" 
       />

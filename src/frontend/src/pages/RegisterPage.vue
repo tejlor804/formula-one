@@ -80,6 +80,7 @@ export default {
       userStore: useUserStore(),
       showPassword: false,
       success: false,
+      loading: false,
       passwordRegex: "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$",
       error: {
         visible: false,

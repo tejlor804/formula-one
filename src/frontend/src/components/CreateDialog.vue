@@ -6,7 +6,7 @@
                 <input-form v-model="teamToCreate" ref="inputForm" />
             </v-card-text>
             <v-card-actions>
-                <v-btn rounded color="error" :loading="loading" dark @click="visible = false">
+                <v-btn rounded color="error" :loading="loading" dark @click="close">
                     Cancel
                 </v-btn>
                 <v-spacer/>
@@ -55,6 +55,10 @@ export default {
         },
         open() {
         this.visible = true;
+    },
+    close() {
+    this.$emit('cancel');
+    this.visible = false;
     }
     },
     

@@ -7,7 +7,7 @@
     </input-form>
         </v-card-text>
         <v-card-actions>
-                <v-btn rounded color="error" dark @click="visible = false">
+                <v-btn rounded color="error" dark @click="cancel">
                     Cancel
                 </v-btn>
                 <v-spacer/>
@@ -61,7 +61,11 @@ export default {
             this.teamToEdit = teamToEdit;
             this.name = teamToEdit.name;
             this.visible = true;
-        }
+        },
+             close() {
+             this.$emit('cancel');
+             this.visible = false;
+             }
     }
 }
 </script>

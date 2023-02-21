@@ -7,7 +7,7 @@
             </v-card-text>
             <v-card-actions>
                 <v-spacer/>
-                <v-btn rounded color="primary" :loading="loading" dark @click="visible = false">
+                <v-btn rounded color="primary" :loading="loading" dark @click="close">
                     Cancel
                 </v-btn>
                 <v-btn rounded color="error" :loading="loading" @click="deleteTeam">
@@ -44,7 +44,11 @@ export default {
             }
             this.loading = false;
             this.visible = false;
-        }
+        },
+             close() {
+             this.$emit('cancel');
+             this.visible = false;
+             }
     }
 }
 </script>

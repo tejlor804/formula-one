@@ -36,7 +36,7 @@ export default {
                 this.currentYear}!`,
             ],
             championshipRules: [
-            v => v > 0 || 'Won world championships should be more than 0!',
+            v => v >= 0 || 'Won world championships should be more than or equal to 0!',
             ],
         }
     },
