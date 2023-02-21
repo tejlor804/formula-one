@@ -25,7 +25,8 @@ export default {
         return {
             visible: false,
             teamToDelete: {},
-            teamStore: useTeamStore()
+            teamStore: useTeamStore(),
+            loading: false
         }
     },
     methods: {

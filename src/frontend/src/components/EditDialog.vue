@@ -7,7 +7,7 @@
     </input-form>
         </v-card-text>
         <v-card-actions>
-                <v-btn rounded color="error" dark @click="cancel">
+                <v-btn rounded color="error" dark @click="close">
                     Cancel
                 </v-btn>
                 <v-spacer/>
